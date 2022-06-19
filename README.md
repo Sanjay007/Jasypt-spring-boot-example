@@ -5,3 +5,31 @@ Encrypting Spring Boot Application using Jasypt Spring Boot . Example with Jasyp
 
 
 
+```
+	<dependency>
+    <groupId>com.github.ulisesbocchio</groupId>
+    <artifactId>jasypt-spring-boot-starter</artifactId>
+    <version>3.0.4</version>
+	</dependency>
+```
+```
+			<plugin>
+    <groupId>com.github.ulisesbocchio</groupId>
+    <artifactId>jasypt-maven-plugin</artifactId>
+    <version>3.0.4</version>
+</plugin>
+```
+
+spring.datasource.url=jdbc:mysql://localhost:3306/broadleaf
+spring.datasource.username= root
+spring.datasource.password= DEC(root)
+jasypt.encryptor.algorithm= PBEWithMD5AndDES
+jasypt.encryptor.iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+mvn jasypt:encrypt -Djasypt.encryptor.password=frugalisminds
+
+mvn jasypt:encrypt -Djasypt.encryptor.password=frugalisminds -Djasypt.plugin.path="file:src/main/resources/application-test.properties"
+
+mvn jasypt:encrypt -Dspring.profiles.active=test -Djasypt.encryptor.password="frugalisminds "
+
+mvn jasypt:encrypt-value -Djasypt.encryptor.password=frugalisminds -Djasypt.plugin.value=root

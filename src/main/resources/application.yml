@@ -1,0 +1,7 @@
+spring:
+  jpa:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/frugalis_blog
+    username: ENC(akbTZ6O9nhXwnQGt88zSYjB6iIv7811opOPjS8q3yI7WsL1plBvsvswg4+xcHAMs)
+    password: ENC(akbTZ6O9nhXwnQGt88zSYjB6iIv7811opOPjS8q3yI7WsL1plBvsvswg4+xcHAMs)
