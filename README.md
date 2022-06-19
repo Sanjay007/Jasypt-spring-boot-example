@@ -39,3 +39,6 @@ mvn jasypt:encrypt -Dspring.profiles.active=test -Djasypt.encryptor.password="fr
 mvn jasypt:encrypt-value -Djasypt.encryptor.password=frugalisminds -Djasypt.plugin.value=root
 ```
 ![image](https://user-images.githubusercontent.com/5675688/174474150-93d59983-c4c1-4790-80cd-8860c6f2bb52.png)
+
+[Step by Step Guide to Encrypt Spring Boot Application Properties Using Jasypt.](https://youtu.be/axGfLehcwdw)
+
